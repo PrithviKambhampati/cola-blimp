@@ -1,0 +1,130 @@
+robotics@ubuntu:~/Documents/robotintro/cola-blimp$ printenv | grep ROS
+ROS_ROOT=/opt/ros/indigo/share/ros
+ROS_PACKAGE_PATH=/opt/ros/indigo/share:/opt/ros/indigo/stacks
+ROS_MASTER_URI=http://localhost:11311
+ROSLISP_PACKAGE_DIRECTORIES=
+ROS_DISTRO=indigo
+ROS_ETC_DIR=/opt/ros/indigo/etc/ros
+robotics@ubuntu:~/Documents/robotintro/cola-blimp$ sudo apt-get install ros-indigo-ros-tutorials
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+ros-indigo-ros-tutorials is already the newest version.
+ros-indigo-ros-tutorials set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libgeomview-1.9.4 libmotif-common libmrm4 libuil4 libxm4
+  linux-headers-4.4.0-31 linux-headers-4.4.0-31-generic
+  linux-image-4.4.0-31-generic linux-image-extra-4.4.0-31-generic
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 134 not upgraded.
+robotics@ubuntu:~/Documents/robotintro/cola-blimp$ rospack find roscpp
+/opt/ros/indigo/share/roscpp
+robotics@ubuntu:~/Documents/robotintro/cola-blimp$ roscd roscpp
+robotics@ubuntu:/opt/ros/indigo/share/roscpp$ ls
+cmake  msg  package.xml  rosbuild  srv
+robotics@ubuntu:/opt/ros/indigo/share/roscpp$ pwd
+/opt/ros/indigo/share/roscpp
+robotics@ubuntu:/opt/ros/indigo/share/roscpp$ ls /opt/ros/indigo/share
+actionlib			  kdl_conversions		rostime
+actionlib_msgs			  kdl_parser			rostopic
+actionlib_tutorials		  laser_assembler		ros_tutorials
+amcl				  laser_filters			rosunit
+angles				  laser_geometry		roswtf
+base_local_planner		  laser_pipeline		rotate_recovery
+bond				  librviz_tutorial		rqt_action
+bond_core			  lms1xx			rqt_bag
+bondcpp				  map_msgs			rqt_bag_plugins
+bondpy				  map_server			rqt_common_plugins
+camera_calibration		  media_export			rqt_console
+camera_calibration_parsers	  message_filters		rqt_dep
+camera_info_manager		  message_generation		rqt_graph
+catkin				  message_runtime		rqt_gui
+class_loader			  mk				rqt_gui_cpp
+clear_costmap_recovery		  move_base			rqt_gui_py
+cmake_modules			  move_base_msgs		rqt_image_view
+collada_parser			  nav_core			rqt_launch
+collada_urdf			  navfn				rqt_logger_level
+common-lisp			  nav_msgs			rqt_moveit
+common_msgs			  nodelet			rqt_msg
+common_tutorials		  nodelet_core			rqt_nav_view
+compressed_depth_image_transport  nodelet_topic_tools		rqt_plot
+compressed_image_transport	  nodelet_tutorial_math		rqt_pose_view
+controller_interface		  octomap			rqt_publisher
+controller_manager		  openslam_gmapping		rqt_py_common
+controller_manager_msgs		  orocos_kdl			rqt_py_console
+control_msgs			  pcl_conversions		rqt_reconfigure
+control_toolbox			  pcl_msgs			rqt_robot_dashboard
+costmap_2d			  pcl_ros			rqt_robot_monitor
+cpp_common			  perception			rqt_robot_plugins
+cv_bridge			  perception_pcl		rqt_robot_steering
+depth_image_proc		  pluginlib			rqt_runtime_monitor
+desktop				  pluginlib_tutorials		rqt_rviz
+desktop_full			  pointcloud_to_laserscan	rqt_service_caller
+diagnostic_aggregator		  pointgrey_camera_description	rqt_shell
+diagnostic_analysis		  polled_camera			rqt_srv
+diagnostic_common_diagnostics	  pr2_description		rqt_tf_tree
+diagnostic_msgs			  python_orocos_kdl		rqt_top
+diagnostics			  python_qt_binding		rqt_topic
+diagnostic_updater		  qt_dotgraph			rqt_web
+diff_drive_controller		  qt_gui			rviz
+doc				  qt_gui_cpp			rviz_plugin_tutorials
+driver_base			  qt_gui_py_common		rviz_python_tutorial
+dynamic_reconfigure		  qwt_dependency		self_test
+eigen_conversions		  random_numbers		sensor_msgs
+eigen_stl_containers		  realtime_tools		shape_msgs
+executive_smach			  resource_retriever		simulators
+filters				  robot				smach
+gazebo_msgs			  robot_localization		smach_msgs
+gazebo_plugins			  robot_model			smach_ros
+gazebo_ros			  robot_state_publisher		smclib
+gazebo_ros_control		  ros				stage
+gazebo_ros_pkgs			  rosbag			stage_ros
+gencpp				  rosbag_migration_rule		std_msgs
+genlisp				  rosbag_storage		std_srvs
+genmsg				  ros_base			stereo_image_proc
+genpy				  rosbash			stereo_msgs
+geographic_msgs			  rosboost_cfg			teleop_twist_joy
+geometric_shapes		  rosbuild			tf
+geometry			  rosclean			tf2
+geometry_msgs			  ros_comm			tf2_geometry_msgs
+geometry_tutorials		  rosconsole			tf2_kdl
+gl_dependency			  rosconsole_bridge		tf2_msgs
+gmapping			  ros_core			tf2_py
+hardware_interface		  roscpp			tf2_ros
+hector_gazebo_plugins		  roscpp_core			tf2_sensor_msgs
+image_common			  roscpp_serialization		tf_conversions
+image_geometry			  roscpp_traits			theora_image_transport
+image_pipeline			  roscpp_tutorials		topic_tools
+image_proc			  roscreate			trajectory_msgs
+image_rotate			  rosgraph			transmission_interface
+image_transport			  rosgraph_msgs			turtle_actionlib
+image_transport_plugins		  roslang			turtlesim
+image_view			  roslaunch			turtle_tf
+interactive_markers		  roslib			turtle_tf2
+interactive_marker_tutorials	  roslint			urdf
+interactive_marker_twist_server   roslisp			urdf_parser_plugin
+jackal_control			  roslz4			urdf_tutorial
+jackal_description		  rosmake			uuid_msgs
+jackal_desktop			  rosmaster			vision_opencv
+jackal_gazebo			  rosmsg			visualization_marker_tutorials
+jackal_msgs			  rosnode			visualization_msgs
+jackal_navigation		  rosout			visualization_tutorials
+jackal_simulator		  rospack			viz
+jackal_viz			  rosparam			voxel_grid
+joint_limits_interface		  rospy				xacro
+joint_state_controller		  rospy_tutorials		xmlrpcpp
+joint_state_publisher		  rosservice
+joy				  rostest
+robotics@ubuntu:/opt/ros/indigo/share/roscpp$ echo $ROS_PACKAGE_PATH
+/opt/ros/indigo/share:/opt/ros/indigo/stacks
+robotics@ubuntu:/opt/ros/indigo/share/roscpp$ roscd roscpp/cmake
+robotics@ubuntu:/opt/ros/indigo/share/roscpp/cmake$ pwd
+/opt/ros/indigo/share/roscpp/cmake
+robotics@ubuntu:/opt/ros/indigo/share/roscpp/cmake$ roscd log
+No active roscore
+robotics@ubuntu:~/.ros/log$ rosls roscpp_tutorials
+cmake  launch  package.xml  srv
+robotics@ubuntu:~/.ros/log$ roscd turtle
+turtle_actionlib/  turtlesim/         turtle_tf/         turtle_tf2/        
+robotics@ubuntu:~/.ros/log$ roscd turtlesim/
+
