@@ -1,0 +1,118 @@
+*****TERMINAL 1*****
+robotics@ubuntu:~/catkin_ws$ roscore
+... logging to /home/robotics/.ros/log/06fb68c4-d914-11e6-9c71-000c295ac341/roslaunch-ubuntu-3694.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://ubuntu:44965/
+ros_comm version 1.11.20
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: indigo
+ * /rosversion: 1.11.20
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [3706]
+ROS_MASTER_URI=http://ubuntu:11311/
+
+setting /run_id to 06fb68c4-d914-11e6-9c71-000c295ac341
+process[rosout-1]: started with pid [3719]
+started core service [/rosout]
+
+*****TERMINAL 2*******
+robotics@ubuntu:~$ cd ~/catkin_ws/
+robotics@ubuntu:~/catkin_ws$ rosnode list
+/rosout
+robotics@ubuntu:~/catkin_ws$ rosnode info /rosout
+--------------------------------------------------------------------------------
+Node [/rosout]
+Publications: 
+ * /rosout_agg [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /rosout [unknown type]
+
+Services: 
+ * /rosout/set_logger_level
+ * /rosout/get_loggers
+
+
+contacting node http://ubuntu:34134/ ...
+Pid: 3719
+
+robotics@ubuntu:~/catkin_ws$ ^C
+
+*****TERMINAL 3******
+robotics@ubuntu:~$ rosrun turtlesim turtlesim_node
+[ INFO] [1484259361.440867698]: Starting turtlesim with node name /turtlesim
+[ INFO] [1484259361.451453348]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+^C
+robotics@ubuntu:~$ rosrun turtlesim turtlesim_node __name:=my_turtle
+[ INFO] [1484259474.514284144]: Starting turtlesim with node name /my_turtle
+[ INFO] [1484259474.526684823]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+robotics@ubuntu:~$ 
+
+
+****TERMINAL 4*********
+robotics@ubuntu:~$ rosnode list
+/rosout
+/turtlesim
+robotics@ubuntu:~$ rosnode list
+/my_turtle
+/rosout
+/turtlesim
+robotics@ubuntu:~$ rosnode cleanup
+ERROR: connection refused to [http://ubuntu:45678/]
+Unable to contact the following nodes:
+ * /turtlesim
+Warning: these might include alive and functioning nodes, e.g. in unstable networks.
+Cleanup will purge all information about these nodes from the master.
+Please type y or n to continue:
+y
+Unregistering /turtlesim
+done
+robotics@ubuntu:~$ rosnode cleanup
+robotics@ubuntu:~$ rosnode list
+/my_turtle
+/rosout
+robotics@ubuntu:~$ rosnode ping my_turtle
+rosnode: node is [/my_turtle]
+pinging /my_turtle with a timeout of 3.0s
+xmlrpc reply from http://ubuntu:45940/	time=0.556946ms
+xmlrpc reply from http://ubuntu:45940/	time=1.288891ms
+xmlrpc reply from http://ubuntu:45940/	time=1.342773ms
+xmlrpc reply from http://ubuntu:45940/	time=1.260042ms
+xmlrpc reply from http://ubuntu:45940/	time=1.255035ms
+xmlrpc reply from http://ubuntu:45940/	time=1.356125ms
+xmlrpc reply from http://ubuntu:45940/	time=0.707865ms
+xmlrpc reply from http://ubuntu:45940/	time=1.246929ms
+xmlrpc reply from http://ubuntu:45940/	time=1.243114ms
+xmlrpc reply from http://ubuntu:45940/	time=0.705957ms
+xmlrpc reply from http://ubuntu:45940/	time=1.384974ms
+xmlrpc reply from http://ubuntu:45940/	time=0.797987ms
+xmlrpc reply from http://ubuntu:45940/	time=1.376867ms
+xmlrpc reply from http://ubuntu:45940/	time=1.456976ms
+xmlrpc reply from http://ubuntu:45940/	time=1.258850ms
+xmlrpc reply from http://ubuntu:45940/	time=1.261950ms
+xmlrpc reply from http://ubuntu:45940/	time=0.611067ms
+xmlrpc reply from http://ubuntu:45940/	time=1.458168ms
+xmlrpc reply from http://ubuntu:45940/	time=1.384974ms
+xmlrpc reply from http://ubuntu:45940/	time=1.343966ms
+xmlrpc reply from http://ubuntu:45940/	time=1.501083ms
+xmlrpc reply from http://ubuntu:45940/	time=1.293898ms
+xmlrpc reply from http://ubuntu:45940/	time=0.556946ms
+xmlrpc reply from http://ubuntu:45940/	time=1.338005ms
+xmlrpc reply from http://ubuntu:45940/	time=1.326084ms
+xmlrpc reply from http://ubuntu:45940/	time=1.387835ms
+xmlrpc reply from http://ubuntu:45940/	time=1.542091ms
+^Cping average: 1.194274ms
+robotics@ubuntu:~$ ^C
+robotics@ubuntu:~$ 
+
