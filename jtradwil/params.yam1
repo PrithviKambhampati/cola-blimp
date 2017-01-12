@@ -1,0 +1,12 @@
+background_b: 255
+background_g: 86
+background_r: 150
+rosdistro: 'indigo
+
+  '
+roslaunch:
+  uris: {host_ubuntu__33622: 'http://ubuntu:33622/'}
+rosversion: '1.11.20
+
+  '
+run_id: 1b6fbb7e-d8e3-11e6-a37b-000c299f3536
