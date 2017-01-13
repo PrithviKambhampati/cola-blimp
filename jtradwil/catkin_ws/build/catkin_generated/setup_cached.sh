@@ -7,6 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CPATH="/home/robotics/git_work/cola-blimp/jtradwil/catkin_ws/devel/include:$CPATH"
 export PWD="/home/robotics/git_work/cola-blimp/jtradwil/catkin_ws/build"
-export PYTHONPATH="/home/robotics/git_work/cola-blimp/jtradwil/catkin_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
