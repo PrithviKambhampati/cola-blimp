@@ -1,0 +1,2 @@
+weather_pkg
+-DCATKIN_DEVEL_PREFIX=/home/robotics/git_work/cola-blimp/lab_one_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robotics/git_work/cola-blimp/lab_one_ws/install -G Unix Makefiles

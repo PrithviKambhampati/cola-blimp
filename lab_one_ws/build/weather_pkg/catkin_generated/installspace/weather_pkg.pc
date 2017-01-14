@@ -1,0 +1,8 @@
+prefix=/home/robotics/git_work/cola-blimp/lab_one_ws/install
+
+Name: weather_pkg
+Description: Description of weather_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robotics/git_work/cola-blimp/lab_one_ws/install/lib 
+Requires: 
