@@ -2,6 +2,7 @@
 import rospy
 from std_msgs.msg import Int64
 from random import randint
+from weather_pkg.msg import weather
 
 hot = ["Boy that is hot!","Better wear a tee-shirt.","I'm melting."]
 warm = ["Looks like a nice day", "Good day for a walk.", "Great weather to be outside."]
@@ -13,13 +14,13 @@ def callback(data):
     x = randint(0,2)
 
     if data.data < 32:
-        rospy.loginfo("It is " + str(data.data) + " degrees outside! " + cold[x])
+        rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cold[x])
     elif data.data < 50:
-        rospy.loginfo("It is " + str(data.data) + " degrees outside! " + cool[x])
+        rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cool[x])
     elif data.data < 80:
-        rospy.loginfo("It is " + str(data.data) + " degrees outside! " + warm[x])
+        rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + warm[x])
     else:
-        rospy.loginfo("It is " + str(data.data) + " degrees outside! " + hot[x])
+        rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + hot[x])
 
     
 def weather_sub():
