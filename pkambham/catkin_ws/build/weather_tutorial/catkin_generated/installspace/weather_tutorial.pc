@@ -1,0 +1,8 @@
+prefix=/home/prithvi/catkin_ws/install
+
+Name: weather_tutorial
+Description: Description of weather_tutorial
+Version: 0.0.0
+Cflags: -I/home/prithvi/catkin_ws/install/include
+Libs: -L/home/prithvi/catkin_ws/install/lib -lweather_tutorial
+Requires: roscpp rospy std_msgs

@@ -1,0 +1,12 @@
+background_b: 255
+background_g: 86
+background_r: 150
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_prithvi__44765: 'http://Prithvi:44765/'}
+rosversion: '1.12.6
+
+  '
+run_id: fce1195a-d85b-11e6-9c86-ec55f9c852e2
