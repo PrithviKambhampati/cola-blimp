@@ -2,6 +2,7 @@
 import sys
 import rospy
 import pyowm
+from random import randint
 from std_msgs.msg import Int64
 from weather_pkg.msg import weather
 
@@ -24,9 +25,9 @@ def callback(data):
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + hot[x])
 
     rospy.loginfo("Temperature is: " + str(data.temp))
-    rospy.loginfo("Cloud Cover is: " + data.clout_cover)
-    rospy.loginfo("pressure is: " + str(data.pressure))
-    rospy.loginfo("Temperature is: " + str(data.dew_point))
+    rospy.loginfo("Cloud Cover is: " + data.cloud_cover)
+    rospy.loginfo("Pressure is: " + str(data.pressure))
+    rospy.loginfo("Zipcode is: " + str(data.zipcode))
 
 def weather_sub():
 
