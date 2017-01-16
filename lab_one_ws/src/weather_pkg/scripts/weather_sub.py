@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-import rospy
-from std_msgs.msg import Int64
-from random import randint
-from weather_pkg.msg import weather
-
-hot = ["Boy that is hot!","Better wear a tee-shirt.","I'm melting."]
+#!/usr/bin/env pythonhot = ["Boy that is hot!","Better wear a tee-shirt.","I'm melting."]
 warm = ["Looks like a nice day", "Good day for a walk.", "Great weather to be outside."]
 cool = ["Better wear a sweeter.", "Getting colder...", "Don't catch a cold..."]
 cold = ["Better wear a jacket!", "Good Day to stay indoors..", "Don't freeze!"]
@@ -13,16 +7,20 @@ def callback(data):
 
     x = randint(0,2)
 
-    if data.data < 32:
+    if data.temp < 32:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cold[x])
-    elif data.data < 50:
+    elif data.temp < 50:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cool[x])
-    elif data.data < 80:
+    elif data.temp < 80:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + warm[x])
     else:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + hot[x])
 
-    
+    rospy.loginfo("Temperature is: " + str(data.temp))
+    rospy.loginfo("Cloud Cover is: " + data.clout_cover)
+    rospy.loginfo("pressure is: " + str(data.pressure))
+    rospy.loginfo("Temperature is: " + str(data.dew_point))
+
 def weather_sub():
 
     rospy.init_node('listener', anonymous=True)
