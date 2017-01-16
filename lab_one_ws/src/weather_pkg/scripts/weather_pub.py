@@ -2,8 +2,6 @@
 import sys
 import rospy
 import pyowm
-import myCode
-
 
 def weather_pub(x):
     pub = rospy.Publisher('chatter', Int64, queue_size=10)
