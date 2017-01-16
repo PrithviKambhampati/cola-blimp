@@ -1,4 +1,11 @@
-#!/usr/bin/env pythonhot = ["Boy that is hot!","Better wear a tee-shirt.","I'm melting."]
+#!/usr/bin/env python
+import sys
+import rospy
+import pyowm
+from std_msgs.msg import Int64
+from weather_pkg.msg import weather
+
+hot = ["Boy that is hot!","Better wear a tee-shirt.","I'm melting."]
 warm = ["Looks like a nice day", "Good day for a walk.", "Great weather to be outside."]
 cool = ["Better wear a sweeter.", "Getting colder...", "Don't catch a cold..."]
 cold = ["Better wear a jacket!", "Good Day to stay indoors..", "Don't freeze!"]
