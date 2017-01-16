@@ -661,8 +661,8 @@ clean: weather_pkg/CMakeFiles/weather_pkg_gencpp.dir/clean
 # Target rules for target weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir
 
 # All Build rule for target.
-weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/all: weather_pkg/CMakeFiles/weather_pkg_generate_messages_py.dir/all
 weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/all: weather_pkg/CMakeFiles/weather_pkg_generate_messages_lisp.dir/all
+weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/all: weather_pkg/CMakeFiles/weather_pkg_generate_messages_py.dir/all
 weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/all: weather_pkg/CMakeFiles/weather_pkg_generate_messages_cpp.dir/all
 	$(MAKE) -f weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/build.make weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/depend
 	$(MAKE) -f weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/build.make weather_pkg/CMakeFiles/weather_pkg_generate_messages.dir/build
