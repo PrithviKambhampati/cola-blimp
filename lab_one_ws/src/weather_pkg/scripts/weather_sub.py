@@ -25,7 +25,7 @@ def weather_sub():
 
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber("chatter", Int64, callback)
+    rospy.Subscriber("chatter", weather, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
