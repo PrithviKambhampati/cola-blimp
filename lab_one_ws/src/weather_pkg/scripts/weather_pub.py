@@ -2,6 +2,7 @@
 import sys
 import rospy
 import pyowm
+from std_msgs.msg import Int64
 
 def weather_pub(x):
     pub = rospy.Publisher('chatter', Int64, queue_size=10)
