@@ -13,11 +13,11 @@ def callback(data):
 
     x = randint(0,2)
 
-    if data.data < 32:
+    if data.temp < 32:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cold[x])
-    elif data.data < 50:
+    elif data.temp < 50:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + cool[x])
-    elif data.data < 80:
+    elif data.temp < 80:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + warm[x])
     else:
         rospy.loginfo("It is " + str(data.temp) + " degrees outside! " + hot[x])
@@ -27,7 +27,7 @@ def weather_sub():
 
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber("chatter", Int64, callback)
+    rospy.Subscriber("chatter", weather, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()

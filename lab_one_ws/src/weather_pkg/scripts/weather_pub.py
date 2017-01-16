@@ -18,10 +18,10 @@ def weather_pub(x):
 	pressure=w.get_pressure()
 	msg=weather()
 	msg.zipcode=x
-	msg.temp=temp['temp']
-	msg.cloud_cover=w.get_clouds()
-	msg.pressure=pressure['press']
-	msg.dew_point=w.get_dewpoint()
+	msg.temp=float(temp['temp'])
+	msg.cloud_cover=str(w.get_clouds())
+	msg.pressure=float(pressure['press'])
+	msg.dew_point=0 #w.get_dewpoint()
 	rospy.loginfo(msg)
         pub.publish(msg)
         rate.sleep()
